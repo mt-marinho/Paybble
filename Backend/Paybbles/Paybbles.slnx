@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/API/" />
+  <Folder Name="/Core/">
+    <Project Path="Core/Paybbles.Application/Paybbles.Application.csproj" />
+    <Project Path="Core/Paybbles.Domain/Paybbles.Domain.csproj" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="Infrastructure/Paybbles.Infrastructure/Paybbles.Infrastructure.csproj" />
+    <Project Path="Infrastructure/Paybbles.Persistence/Paybbles.Persistence.csproj" />
+  </Folder>
+</Solution>
