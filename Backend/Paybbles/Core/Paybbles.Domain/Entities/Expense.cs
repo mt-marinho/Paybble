@@ -1,12 +1,15 @@
 ﻿namespace Paybbles.Domain.Entities
 {
-    public class Expense : AuditableEntity
+    public class Expense : MonthlyEntry
     {
-        public int Id { get; set; }
-        public string Description { get; set; } = string.Empty;
-        public int Value { get; private set; }
         public bool Paid { get; set; }
-        public int Month { get; private set; }
-        public int YearLedgerId { get; private set; }
+
+        protected Expense() { }
+
+        public Expense(string description, int value, int month, int yearLedgerId)
+            : base(description, value, month, yearLedgerId)
+        {
+            Paid = false;
+        }
     }
 }
