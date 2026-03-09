@@ -1,20 +1,16 @@
-﻿using Paybbles.Domain.Enums;
-
-namespace Paybbles.Domain.Entities
+﻿namespace Paybbles.Domain.Entities
 {
-    public class MonthlyEntry : AuditableEntity
+    public class Transfer : AuditableEntity
     {
         public int Id { get; private set; }
         public string Description { get; private set; } = string.Empty;
         public int Value { get; private set; }
         public int Year { get; private set; }
         public int Month { get; private set; }
-        public Recurrence Recurrence { get; private set; }
-        public int Frequency { get; private set; }
 
-        protected MonthlyEntry() { }
+        protected Transfer() { }
 
-        protected MonthlyEntry(Guid userId, string description, int value, int year, int month, Recurrence recurrence = Recurrence.None, int frequency = 1)
+        public Transfer(Guid userId, string description, int value, int year, int month)
         {
             if (userId == Guid.Empty)
                 throw new ArgumentException("UserId must be valid.");
@@ -24,16 +20,6 @@ namespace Paybbles.Domain.Entities
             ChangeValue(value);
             ChangeYear(year);
             ChangeMonth(month);
-            ChangeRecurrence(recurrence, frequency);
-        }
-
-        public void ChangeRecurrence(Recurrence recurrence, int frequency = 1)
-        {
-            if (recurrence != Recurrence.None && frequency < 1)
-                throw new ArgumentException("Frequency must be at least 1.");
-
-            Recurrence = recurrence;
-            Frequency = recurrence == Recurrence.None ? 0 : frequency;
         }
 
         public void ChangeDescription(string description)
