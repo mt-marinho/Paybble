@@ -1,4 +1,4 @@
-﻿namespace Paybbles.Domain.Entities
+﻿namespace Paybble.Domain.Entities
 {
     public class Savings : AuditableEntity
     {

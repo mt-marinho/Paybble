@@ -1,4 +1,4 @@
-﻿namespace Paybbles.Domain.Enums
+﻿namespace Paybble.Domain.Enums
 {
     public enum Recurrence
     {

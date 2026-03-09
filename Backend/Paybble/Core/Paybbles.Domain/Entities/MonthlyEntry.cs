@@ -1,6 +1,6 @@
-﻿using Paybbles.Domain.Enums;
+﻿using Paybble.Domain.Enums;
 
-namespace Paybbles.Domain.Entities
+namespace Paybble.Domain.Entities
 {
     public class MonthlyEntry : AuditableEntity
     {
