@@ -6,4 +6,31 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Contracts\Persistence\" />
+    <Folder Include="Features\Expense\Commands\DeleteExpense\" />
+    <Folder Include="Features\Expense\Commands\PatchExpensePaymentStatus\" />
+    <Folder Include="Features\Expense\Commands\UpdateExpense\" />
+    <Folder Include="Features\Expense\Queries\GetExpense\" />
+    <Folder Include="Features\Expense\Queries\GetExpensesList\" />
+    <Folder Include="Features\Expense\Queries\GetExpenseTotalNet\" />
+    <Folder Include="Features\Income\Commands\CreateIncome\" />
+    <Folder Include="Features\Income\Commands\DeleteIncome\" />
+    <Folder Include="Features\Income\Commands\UpdateIncome\" />
+    <Folder Include="Features\Income\Queries\GetIncomeTotalNet\" />
+    <Folder Include="Features\Income\Queries\GetIncomesList\" />
+    <Folder Include="Features\Income\Queries\GetIncome\" />
+    <Folder Include="Features\Savings\Commands\CreateSavings\" />
+    <Folder Include="Features\Savings\Commands\DeleteSavings\" />
+    <Folder Include="Features\Savings\Commands\UpdateSavings\" />
+    <Folder Include="Features\Savings\Queries\GetSavingsTotalNet\" />
+    <Folder Include="Features\Savings\Queries\GetSavingsList\" />
+    <Folder Include="Features\Savings\Queries\GetSavings\" />
+    <Folder Include="Features\Transfer\Commands\CreateTransfer\" />
+    <Folder Include="Features\Transfer\Commands\DeleteTransfer\" />
+    <Folder Include="Features\Transfer\Commands\UpdateTransfer\" />
+    <Folder Include="Features\Transfer\Queries\GetTrensferList\" />
+    <Folder Include="Features\Transfer\Queries\GetTransfer\" />
+  </ItemGroup>
+
 </Project>
