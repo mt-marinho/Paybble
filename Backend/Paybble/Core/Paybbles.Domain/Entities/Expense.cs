@@ -9,8 +9,8 @@ namespace Paybble.Domain.Entities
 
         protected Expense() { }
 
-        public Expense(Guid userId, string description, int value, int year, int month, DateOnly dueDate, Recurrence recurrence = Recurrence.None, int frequency = 1)
-            : base(userId, description, value, year, month, recurrence, frequency)
+        public Expense(string description, int value, int year, int month, DateOnly dueDate, Recurrence recurrence = Recurrence.None, int frequency = 1)
+            : base(description, value, year, month, recurrence, frequency)
         {
             ChangeDueDate(dueDate);
             Paid = false;

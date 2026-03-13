@@ -1,5 +1,7 @@
 <Solution>
-  <Folder Name="/API/" />
+  <Folder Name="/API/">
+    <Project Path="Paybble/Paybble.csproj" Id="51845c63-99c8-49dd-b8c1-a1a6f331b68e" />
+  </Folder>
   <Folder Name="/Core/">
     <Project Path="Core/Paybbles.Application/Paybble.Application.csproj" />
     <Project Path="Core/Paybbles.Domain/Paybble.Domain.csproj" />

@@ -14,12 +14,8 @@ namespace Paybble.Domain.Entities
 
         protected MonthlyEntry() { }
 
-        protected MonthlyEntry(Guid userId, string description, int value, int year, int month, Recurrence recurrence = Recurrence.None, int frequency = 1)
+        protected MonthlyEntry( string description, int value, int year, int month, Recurrence recurrence = Recurrence.None, int frequency = 1)
         {
-            if (userId == Guid.Empty)
-                throw new ArgumentException("UserId must be valid.");
-
-            UserId = userId;
             ChangeDescription(description);
             ChangeValue(value);
             ChangeYear(year);
