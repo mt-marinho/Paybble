@@ -14,7 +14,7 @@ namespace Paybble.Domain.Entities
 
         protected MonthlyEntry() { }
 
-        protected MonthlyEntry( string description, int value, int year, int month, Recurrence recurrence = Recurrence.None, int frequency = 1)
+        protected MonthlyEntry( string description, int value, int year, int month, Recurrence recurrence, int frequency)
         {
             ChangeDescription(description);
             ChangeValue(value);
@@ -23,7 +23,7 @@ namespace Paybble.Domain.Entities
             ChangeRecurrence(recurrence, frequency);
         }
 
-        public void ChangeRecurrence(Recurrence recurrence, int frequency = 1)
+        public void ChangeRecurrence(Recurrence recurrence, int frequency)
         {
             if (recurrence != Recurrence.None && frequency < 1)
                 throw new ArgumentException("Frequency must be at least 1.");

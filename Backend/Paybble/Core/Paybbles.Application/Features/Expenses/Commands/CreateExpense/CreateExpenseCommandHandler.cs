@@ -11,7 +11,6 @@ namespace Paybble.Application.Features.Expenses.Commands.CreateExpense
         {
             var response = new CreateExpenseResponse();
 
-
             var expense = new Expense(
                 request.Description,
                 request.Value,

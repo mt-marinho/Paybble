@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Expenses\Commands\DeleteExpense\" />
-    <Folder Include="Features\Expenses\Commands\PatchExpensePaymentStatus\" />
-    <Folder Include="Features\Expenses\Commands\UpdateExpense\" />
-    <Folder Include="Features\Expenses\Queries\GetExpense\" />
-    <Folder Include="Features\Expenses\Queries\GetExpensesList\" />
     <Folder Include="Features\Expenses\Queries\GetExpenseTotalNet\" />
     <Folder Include="Features\Income\Commands\CreateIncome\" />
     <Folder Include="Features\Income\Commands\DeleteIncome\" />
