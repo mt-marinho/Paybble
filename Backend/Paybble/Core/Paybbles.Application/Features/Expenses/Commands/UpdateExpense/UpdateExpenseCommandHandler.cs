@@ -10,6 +10,7 @@ namespace Paybble.Application.Features.Expenses.Commands.UpdateExpense
         public async Task Handle(UpdateExpenseCommand request, CancellationToken cancellationToken)
         {
             var expense = await expensRepository.GetByIdAsync(request.id);
+
             if (expense is null)
                 throw new NotFoundException(nameof(Expense), request.id);
 

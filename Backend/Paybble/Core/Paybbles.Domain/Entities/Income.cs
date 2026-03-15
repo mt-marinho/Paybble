@@ -8,12 +8,13 @@ namespace Paybble.Domain.Entities
 
         protected Income() { }
 
-        public Income(Guid userId, string description, int value, int year, int month, Recurrence recurrence = Recurrence.None, int frequency = 1)
-            : base(userId, description, value, year, month, recurrence, frequency)
+        public Income(string description, int value, int year, int month, Recurrence recurrence, int frequency, DateOnly? PaymentDate)
+            : base(description, value, year, month, recurrence, frequency)
         {
+            ChangePaymentDate(PaymentDate);
         }
 
-        public void ChangePaymentDate(DateOnly paymentDate)
+        public void ChangePaymentDate(DateOnly? paymentDate)
         {
             if (paymentDate == default)
                 throw new ArgumentException("PaymentDate is required.");

@@ -1,14 +1,14 @@
 ﻿namespace Paybble.Domain.Entities
 {
-    public class Savings : AuditableEntity
+    public class Saving : AuditableEntity
     {
         public int Id { get; private set; }
         public string Description { get; private set; } = string.Empty;
         public int Value { get; private set; }
 
-        protected Savings() { }
+        protected Saving() { }
 
-        public Savings(Guid userId, string description, int value)
+        public Saving(Guid userId, string description, int value)
         {
             if (userId == Guid.Empty)
                 throw new ArgumentException("UserId must be valid.");
