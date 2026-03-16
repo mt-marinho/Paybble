@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Savings\Commands\CreateSavings\" />
     <Folder Include="Features\Savings\Commands\DeleteSavings\" />
     <Folder Include="Features\Savings\Commands\UpdateSavings\" />
     <Folder Include="Features\Savings\Queries\GetSavingsTotalNet\" />

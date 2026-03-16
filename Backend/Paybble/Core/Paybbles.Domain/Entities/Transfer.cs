@@ -1,4 +1,6 @@
-﻿namespace Paybble.Domain.Entities
+﻿using Paybble.Domain.Enums;
+
+namespace Paybble.Domain.Entities
 {
     public class Transfer : AuditableEntity
     {
@@ -7,20 +9,19 @@
         public int Value { get; private set; }
         public int Year { get; private set; }
         public int Month { get; private set; }
+        public TransferType Type { get; set; }
 
         protected Transfer() { }
 
-        public Transfer(Guid userId, string description, int value, int year, int month)
+        public Transfer(string description, int value, int year, int month, TransferType type)
         {
-            if (userId == Guid.Empty)
-                throw new ArgumentException("UserId must be valid.");
-
-            UserId = userId;
             ChangeDescription(description);
             ChangeValue(value);
             ChangeYear(year);
             ChangeMonth(month);
+            ChangetType(type);
         }
+
 
         public void ChangeDescription(string description)
         {
@@ -53,5 +54,12 @@
 
             Month = month;
         }
+        public void ChangetType(TransferType type)
+        {
+            if (!Enum.IsDefined(typeof(TransferType), type))
+                throw new ArgumentException("Tipo de transferência inválido.");
+
+            Type = type;
+        }   
     }
 }

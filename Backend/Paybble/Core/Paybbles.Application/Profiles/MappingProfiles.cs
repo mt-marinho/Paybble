@@ -5,6 +5,7 @@ using Paybble.Application.Features.Expenses.Queries.GetExpensesByYearMonth;
 using Paybble.Application.Features.Incomes.Commands.CreateIncome;
 using Paybble.Application.Features.Incomes.Queries.GetIncomeDetail;
 using Paybble.Application.Features.Incomes.Queries.GetIncomesByYearMonth;
+using Paybble.Application.Features.Savings.Commands.CreateSavings;
 using Paybble.Domain.Entities;
 
 namespace Paybble.Application.Profiles
@@ -19,6 +20,7 @@ namespace Paybble.Application.Profiles
             CreateMap<Income, CreateIncomeDTO>();
             CreateMap<Income, IncomeDetailVm>();
             CreateMap<List<Income>, List<IncomesByYearMonthVm>>();
+            CreateMap<Saving, CreateSavingsResponse>();
         }
     }
 }

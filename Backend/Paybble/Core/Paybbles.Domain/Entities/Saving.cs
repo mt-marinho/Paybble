@@ -4,18 +4,14 @@
     {
         public int Id { get; private set; }
         public string Description { get; private set; } = string.Empty;
-        public int Value { get; private set; }
+        public int GoalValue { get; private set; }
 
         protected Saving() { }
 
-        public Saving(Guid userId, string description, int value)
+        public Saving(string description, int goalValue)
         {
-            if (userId == Guid.Empty)
-                throw new ArgumentException("UserId must be valid.");
-
-            UserId = userId;
             ChangeDescription(description);
-            ChangeValue(value);
+            ChangeGoalValue(goalValue);
         }
 
         public void ChangeDescription(string description)
@@ -26,12 +22,12 @@
             Description = description.Trim();
         }
 
-        public void ChangeValue(int value)
+        public void ChangeGoalValue(int goalValue)
         {
-            if (value <= 0)
+            if (goalValue <= 0)
                 throw new ArgumentException("Value must be greater than zero.");
 
-            Value = value;
+            GoalValue = goalValue;
         }
     }
 }

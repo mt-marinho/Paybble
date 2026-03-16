@@ -19,17 +19,17 @@ namespace Paybble.Domain.Entities
             ChangeDescription(description);
             ChangeValue(value);
             ChangeYear(year);
-            ChangeMonth(month);
+            ChangeMonth(month);  
             ChangeRecurrence(recurrence, frequency);
         }
 
         public void ChangeRecurrence(Recurrence recurrence, int frequency)
         {
-            if (recurrence != Recurrence.None && frequency < 1)
+            if (recurrence != Recurrence.Single && frequency < 1)
                 throw new ArgumentException("Frequency must be at least 1.");
 
             Recurrence = recurrence;
-            Frequency = recurrence == Recurrence.None ? 0 : frequency;
+            Frequency = recurrence == Recurrence.Single ? 0 : frequency;
         }
 
         public void ChangeDescription(string description)
