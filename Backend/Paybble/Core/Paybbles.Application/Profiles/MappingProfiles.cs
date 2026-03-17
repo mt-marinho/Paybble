@@ -6,6 +6,11 @@ using Paybble.Application.Features.Incomes.Commands.CreateIncome;
 using Paybble.Application.Features.Incomes.Queries.GetIncomeDetail;
 using Paybble.Application.Features.Incomes.Queries.GetIncomesByYearMonth;
 using Paybble.Application.Features.Savings.Commands.CreateSavings;
+using Paybble.Application.Features.Savings.Queries.GetSavings;
+using Paybble.Application.Features.Savings.Queries.GetSavingsList;
+using Paybble.Application.Features.Transfers.Commands.CreateTransfer;
+using Paybble.Application.Features.Transfers.Queries.GetTransfer;
+using Paybble.Application.Features.Transfers.Queries.GetTrensferList;
 using Paybble.Domain.Entities;
 
 namespace Paybble.Application.Profiles
@@ -17,10 +22,18 @@ namespace Paybble.Application.Profiles
             CreateMap<Expense, CreateExpenseDTO>();
             CreateMap<Expense, ExpenseDetailVm>();
             CreateMap<List<Expense>, List<ExpensesByYearMonthVm>>();
+
             CreateMap<Income, CreateIncomeDTO>();
             CreateMap<Income, IncomeDetailVm>();
             CreateMap<List<Income>, List<IncomesByYearMonthVm>>();
+
             CreateMap<Saving, CreateSavingsResponse>();
+            CreateMap<Saving, GetSavingsDTO>();
+            CreateMap<List<Saving>, List<GetSavingsListDTO>>();
+
+            CreateMap<Transfer, CreateTransferDTO>();
+            CreateMap<Transfer, GetTransferDTO>();
+            CreateMap<List<Transfer>, List<GetTransferListDTO>>();
         }
     }
 }

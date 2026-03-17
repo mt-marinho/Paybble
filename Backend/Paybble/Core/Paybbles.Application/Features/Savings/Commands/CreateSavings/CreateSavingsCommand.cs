@@ -2,5 +2,8 @@
 
 namespace Paybble.Application.Features.Savings.Commands.CreateSavings
 {
-    public record CreateSavingsCommand(string description, int goalValue) : IRequest<CreateSavingsResponse>;
+    public record CreateSavingsCommand(
+        string description,
+        decimal goalValue
+    ) : IRequest<CreateSavingsResponse>;
 }

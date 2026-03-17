@@ -6,14 +6,14 @@ namespace Paybble.Domain.Entities
     {
         public int Id { get; private set; }
         public string Description { get; private set; } = string.Empty;
-        public int Value { get; private set; }
+        public decimal Value { get; private set; }
         public int Year { get; private set; }
         public int Month { get; private set; }
         public TransferType Type { get; set; }
 
         protected Transfer() { }
 
-        public Transfer(string description, int value, int year, int month, TransferType type)
+        public Transfer(string description, decimal value, int year, int month, TransferType type)
         {
             ChangeDescription(description);
             ChangeValue(value);
@@ -31,7 +31,7 @@ namespace Paybble.Domain.Entities
             Description = description.Trim();
         }
 
-        public void ChangeValue(int value)
+        public void ChangeValue(decimal value)
         {
             if (value <= 0)
                 throw new ArgumentException("Value must be greater than zero.");

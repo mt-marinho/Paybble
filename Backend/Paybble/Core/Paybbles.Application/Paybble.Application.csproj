@@ -7,19 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Savings\Commands\DeleteSavings\" />
-    <Folder Include="Features\Savings\Commands\UpdateSavings\" />
-    <Folder Include="Features\Savings\Queries\GetSavingsTotalNet\" />
-    <Folder Include="Features\Savings\Queries\GetSavingsList\" />
-    <Folder Include="Features\Savings\Queries\GetSavings\" />
-    <Folder Include="Features\Transfer\Commands\CreateTransfer\" />
-    <Folder Include="Features\Transfer\Commands\DeleteTransfer\" />
-    <Folder Include="Features\Transfer\Commands\UpdateTransfer\" />
-    <Folder Include="Features\Transfer\Queries\GetTrensferList\" />
-    <Folder Include="Features\Transfer\Queries\GetTransfer\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="16.1.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="MediatR" Version="14.1.0" />

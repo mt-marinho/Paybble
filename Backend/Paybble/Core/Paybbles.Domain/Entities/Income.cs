@@ -8,7 +8,7 @@ namespace Paybble.Domain.Entities
 
         protected Income() { }
 
-        public Income(string description, int value, int year, int month, Recurrence recurrence, int frequency, DateOnly? PaymentDate)
+        public Income(string description, decimal value, int year, int month, Recurrence recurrence, int frequency, DateOnly? PaymentDate)
             : base(description, value, year, month, recurrence, frequency)
         {
             ChangePaymentDate(PaymentDate);

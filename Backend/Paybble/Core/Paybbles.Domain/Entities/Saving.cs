@@ -4,11 +4,11 @@
     {
         public int Id { get; private set; }
         public string Description { get; private set; } = string.Empty;
-        public int GoalValue { get; private set; }
+        public decimal GoalValue { get; private set; }
 
         protected Saving() { }
 
-        public Saving(string description, int goalValue)
+        public Saving(string description, decimal goalValue)
         {
             ChangeDescription(description);
             ChangeGoalValue(goalValue);
@@ -22,7 +22,7 @@
             Description = description.Trim();
         }
 
-        public void ChangeGoalValue(int goalValue)
+        public void ChangeGoalValue(decimal goalValue)
         {
             if (goalValue <= 0)
                 throw new ArgumentException("Value must be greater than zero.");

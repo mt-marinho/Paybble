@@ -6,7 +6,7 @@ namespace Paybble.Application.Features.Expenses.Commands.CreateExpense
     public record CreateExpenseCommand
     (
         string Description,
-        int Value,
+        decimal Value,
         int Year,
         int Month,
         Recurrence Recurrence,

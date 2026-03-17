@@ -6,7 +6,7 @@ namespace Paybble.Application.Features.Expenses.Queries.GetExpensesByYearMonth
     {
         public int Id { get; set; }
         public string Description { get; set; } = string.Empty;
-        public int Value { get; set; }
+        public decimal Value { get; set; }
         public Recurrence Recurrence { get; set; }
         public int Frequency { get; set; }
         public bool Paid { get; set; }

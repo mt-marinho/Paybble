@@ -6,7 +6,7 @@ namespace Paybble.Application.Features.Incomes.Commands.CreateIncome
 {
     public record CreateIncomeCommand(
         string Description,
-        int Value,
+        decimal Value,
         int Year,
         int Month,
         Recurrence Recurrence,

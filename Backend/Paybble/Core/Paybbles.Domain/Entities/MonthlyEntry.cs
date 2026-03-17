@@ -6,7 +6,7 @@ namespace Paybble.Domain.Entities
     {
         public int Id { get; private set; }
         public string Description { get; private set; } = string.Empty;
-        public int Value { get; private set; }
+        public decimal Value { get; private set; }
         public int Year { get; private set; }
         public int Month { get; private set; }
         public Recurrence Recurrence { get; private set; }
@@ -14,7 +14,7 @@ namespace Paybble.Domain.Entities
 
         protected MonthlyEntry() { }
 
-        protected MonthlyEntry( string description, int value, int year, int month, Recurrence recurrence, int frequency)
+        protected MonthlyEntry( string description, decimal value, int year, int month, Recurrence recurrence, int frequency)
         {
             ChangeDescription(description);
             ChangeValue(value);
@@ -40,7 +40,7 @@ namespace Paybble.Domain.Entities
             Description = description.Trim();
         }
 
-        public void ChangeValue(int value)
+        public void ChangeValue(decimal value)
         {
             if (value <= 0)
                 throw new ArgumentException("Value must be greater than zero.");

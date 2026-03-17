@@ -9,7 +9,7 @@ namespace Paybble.Domain.Entities
 
         protected Expense() { }
 
-        public Expense(string description, int value, int year, int month, DateOnly dueDate, Recurrence recurrence, int frequency)
+        public Expense(string description, decimal value, int year, int month, DateOnly dueDate, Recurrence recurrence, int frequency)
             : base(description, value, year, month, recurrence, frequency)
         {
             ChangeDueDate(dueDate);
