@@ -20,6 +20,11 @@
   <ItemGroup>
     <Folder Include="Features\Categories\Commands\" />
     <Folder Include="Features\Categories\Queries\" />
+    <Folder Include="Features\Transaction\Commands\CreateTransaction\" />
+    <Folder Include="Features\Transaction\Commands\DeleteTransection\" />
+    <Folder Include="Features\Transaction\Commands\PatchTransaction\" />
+    <Folder Include="Features\Transaction\Commands\UpdateTransaction\" />
+    <Folder Include="Features\Transaction\Queries\" />
   </ItemGroup>
 
 </Project>
