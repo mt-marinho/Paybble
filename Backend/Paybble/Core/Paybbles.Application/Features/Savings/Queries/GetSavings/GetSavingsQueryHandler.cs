@@ -14,7 +14,7 @@ namespace Paybble.Application.Features.Savings.Queries.GetSavings
             var savings = await savingsRepository.GetByIdAsync(request.id);
 
             if(savings == null)
-                throw new NotFoundException(nameof(Income), request.id);
+                throw new NotFoundException(nameof(Saving), request.id);
 
             response.savings = mapper.Map<GetSavingsDTO>(savings);
             return response;

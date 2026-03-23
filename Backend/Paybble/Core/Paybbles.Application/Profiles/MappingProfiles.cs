@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
-using Paybble.Application.Features.Expenses.Commands.CreateExpense;
-using Paybble.Application.Features.Expenses.Queries.GetExpense;
-using Paybble.Application.Features.Expenses.Queries.GetExpensesByYearMonth;
-using Paybble.Application.Features.Incomes.Commands.CreateIncome;
-using Paybble.Application.Features.Incomes.Queries.GetIncomeDetail;
-using Paybble.Application.Features.Incomes.Queries.GetIncomesByYearMonth;
+using Paybble.Application.Features.Categories.Commands.CreateCategory;
+using Paybble.Application.Features.Categories.Queries.GetCategoryDetail;
+using Paybble.Application.Features.Categories.Queries.GetCategoriesList;
 using Paybble.Application.Features.Savings.Commands.CreateSavings;
 using Paybble.Application.Features.Savings.Queries.GetSavings;
 using Paybble.Application.Features.Savings.Queries.GetSavingsList;
+using Paybble.Application.Features.Transactions.Commands.CreateTransaction;
+using Paybble.Application.Features.Transactions.Queries.GetTransactionDetail;
+using Paybble.Application.Features.Transactions.Queries.GetTransactionsByYearMonth;
 using Paybble.Application.Features.Transfers.Commands.CreateTransfer;
 using Paybble.Application.Features.Transfers.Queries.GetTransfer;
 using Paybble.Application.Features.Transfers.Queries.GetTrensferList;
@@ -19,17 +19,17 @@ namespace Paybble.Application.Profiles
     {
         public MappingProfiles()
         {
-            CreateMap<Expense, CreateExpenseDTO>();
-            CreateMap<Expense, ExpenseDetailVm>();
-            CreateMap<List<Expense>, List<ExpensesByYearMonthVm>>();
-
-            CreateMap<Income, CreateIncomeDTO>();
-            CreateMap<Income, IncomeDetailVm>();
-            CreateMap<List<Income>, List<IncomesByYearMonthVm>>();
+            CreateMap<Category, CreateCategoryDTO>();
+            CreateMap<Category, CategoryDetailVm>();
+            CreateMap<Category, CategoryListVm>();
 
             CreateMap<Saving, CreateSavingsResponse>();
             CreateMap<Saving, GetSavingsDTO>();
             CreateMap<List<Saving>, List<GetSavingsListDTO>>();
+
+            CreateMap<Transaction, CreateTransactionDTO>();
+            CreateMap<Transaction, TransactionDetailVm>();
+            CreateMap<Transaction, TransactionsByYearMonthVm>();
 
             CreateMap<Transfer, CreateTransferDTO>();
             CreateMap<Transfer, GetTransferDTO>();

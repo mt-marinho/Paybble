@@ -12,7 +12,7 @@ namespace Paybble.Application.Features.Savings.Commands.DeleteSavings
             var savings = await savingsRepository.GetByIdAsync(request.id);
 
             if (savings == null)
-                throw new NotFoundException(nameof(Income), request.id);
+                throw new NotFoundException(nameof(Saving), request.id);
             
             await savingsRepository.DeleteAsync(savings);
         }

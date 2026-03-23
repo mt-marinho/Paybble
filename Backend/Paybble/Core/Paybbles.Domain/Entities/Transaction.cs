@@ -18,7 +18,7 @@ namespace Paybble.Domain.Entities
 
         protected Transaction() { }
 
-        protected Transaction(string description, decimal value, int year, int month, Recurrence recurrence, int frequency, DateOnly date, TransferType transferType, TransactionType transactionType)
+        public Transaction(string description, decimal value, int year, int month, Recurrence recurrence, int frequency, DateOnly date, TransferType transferType, TransactionType transactionType)
         {
             ChangeDescription(description);
             ChangeValue(value);
@@ -95,5 +95,9 @@ namespace Paybble.Domain.Entities
 
             TransactionType = type;
         }
+
+        public void MarkAsPaid() => Paid = true;
+
+        public void MarkAsUnpaid() => Paid = false;
     }
 }

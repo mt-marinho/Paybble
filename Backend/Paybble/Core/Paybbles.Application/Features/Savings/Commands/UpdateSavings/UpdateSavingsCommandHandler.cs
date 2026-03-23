@@ -12,7 +12,7 @@ namespace Paybble.Application.Features.Savings.Commands.UpdateSavings
             var savings = await savingsRepository.GetByIdAsync(request.id);
 
             if (savings == null)
-                throw new NotFoundException(nameof(Income), request.id);
+                throw new NotFoundException(nameof(Saving), request.id);
 
             savings.ChangeDescription(request.description);
             savings.ChangeGoalValue(request.goalValue);

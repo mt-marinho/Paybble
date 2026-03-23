@@ -7,6 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Features\Transactions\Commands\DeleteTransection\**" />
+    <Compile Remove="Features\Transactions\Commands\PatchTransaction\**" />
+    <EmbeddedResource Remove="Features\Transactions\Commands\DeleteTransection\**" />
+    <EmbeddedResource Remove="Features\Transactions\Commands\PatchTransaction\**" />
+    <None Remove="Features\Transactions\Commands\DeleteTransection\**" />
+    <None Remove="Features\Transactions\Commands\PatchTransaction\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="16.1.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="MediatR" Version="14.1.0" />
@@ -20,11 +29,9 @@
   <ItemGroup>
     <Folder Include="Features\Categories\Commands\" />
     <Folder Include="Features\Categories\Queries\" />
-    <Folder Include="Features\Transaction\Commands\CreateTransaction\" />
-    <Folder Include="Features\Transaction\Commands\DeleteTransection\" />
-    <Folder Include="Features\Transaction\Commands\PatchTransaction\" />
-    <Folder Include="Features\Transaction\Commands\UpdateTransaction\" />
-    <Folder Include="Features\Transaction\Queries\" />
+    <Folder Include="Features\Transactions\Commands\CreateTransaction\" />
+    <Folder Include="Features\Transactions\Commands\UpdateTransaction\" />
+    <Folder Include="Features\Transactions\Queries\" />
   </ItemGroup>
 
 </Project>
