@@ -15,10 +15,13 @@ namespace Paybble.Domain.Entities
         public DateOnly Date { get; private set; }
         public TransactionType TransactionType { get; set; }
         public TransferType TransferType { get; set; }
+        public int? CreditCardPurchaseId { get; private set; }
+        public int? InstallmentNumber { get; private set; }
+        public CreditCardPurchase? CreditCardPurchase { get; private set; }
 
         protected Transaction() { }
 
-        public Transaction(string description, decimal value, int year, int month, Recurrence recurrence, int frequency, DateOnly date, TransferType transferType, TransactionType transactionType)
+        public Transaction(string description, decimal value, int year, int month, Recurrence recurrence, int frequency, DateOnly date, TransferType transferType, TransactionType transactionType, int? creditCardPurchaseId = null, int? installmentNumber = null)
         {
             ChangeDescription(description);
             ChangeValue(value);
@@ -28,7 +31,14 @@ namespace Paybble.Domain.Entities
             ChangeDate(date);
             ChangeTransferType(transferType);
             ChangetTransactionType(transactionType);
+            if (creditCardPurchaseId.HasValue) ChangeCreditCardPurchase(creditCardPurchaseId.Value, installmentNumber);
             Paid = false;
+        }
+
+        public void ChangeCreditCardPurchase(int creditCardPurchaseId, int? installmentNumber)
+        {
+             CreditCardPurchaseId = creditCardPurchaseId;
+             InstallmentNumber = installmentNumber;
         }
 
         public void ChangeRecurrence(Recurrence recurrence, int frequency)

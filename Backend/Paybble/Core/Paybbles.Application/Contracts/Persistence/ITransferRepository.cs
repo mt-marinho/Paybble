@@ -1,8 +1,0 @@
-﻿using Paybble.Domain.Entities;
-
-namespace Paybble.Application.Contracts.Persistence
-{
-    public interface ITransferRepository : IAsyncRepository<Transfer>
-    {
-    }
-}
