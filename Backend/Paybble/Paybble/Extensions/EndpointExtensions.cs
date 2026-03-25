@@ -1,4 +1,4 @@
-﻿using Paybble.Endpoints.Contracts;
+﻿using Paybble.Api.Endpoints;
 
 namespace Paybble.Extensions
 {

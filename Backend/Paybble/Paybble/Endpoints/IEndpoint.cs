@@ -1,4 +1,4 @@
-﻿namespace Paybble.Endpoints.Contracts
+﻿namespace Paybble.Api.Endpoints
 {
     public interface IEndpoint
     {

@@ -12,10 +12,7 @@ namespace Paybble.Application.Features.Categories.Commands.CreateCategory
             var response = new CreateCategoryResponse();
 
             var category = new Category(
-                request.Name,
-                request.Description,
-                request.Icon,
-                request.Color
+                request.Name
             );
 
             var createdCategory = await categoryRepository.AddAsync(category);
