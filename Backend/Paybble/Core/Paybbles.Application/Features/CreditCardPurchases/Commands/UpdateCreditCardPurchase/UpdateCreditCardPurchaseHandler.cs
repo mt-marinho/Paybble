@@ -7,7 +7,7 @@ using Paybble.Domain.Enums;
 
 namespace Paybble.Application.Features.CreditCardPurchases.Commands.UpdateCreditCardPurchase
 {
-    public class UpdateCreditCardPurchaseHandler(ICreditCardPurchaseRepository purchaseRepository, ITransactionRepository transactionRepository, IMapper mapper) : IRequestHandler<UpdateCreditCardPurchaseCommand>
+    public class UpdateCreditCardPurchaseHandler(ICreditCardPurchaseRepository purchaseRepository, ITransactionRepository transactionRepository) : IRequestHandler<UpdateCreditCardPurchaseCommand>
     {
         public async Task Handle(UpdateCreditCardPurchaseCommand request, CancellationToken cancellationToken)
         {

@@ -5,8 +5,7 @@ using Paybble.Domain.Entities;
 
 namespace Paybble.Application.Features.Categories.Commands.UpdateCategory
 {
-    public class UpdateCategoryCommandHandler(ICategoryRepository categoryRepository) 
-        : IRequestHandler<UpdateCategoryCommand>
+    public class UpdateCategoryCommandHandler(ICategoryRepository categoryRepository) : IRequestHandler<UpdateCategoryCommand>
     {
         public async Task Handle(UpdateCategoryCommand request, CancellationToken cancellationToken)
         {

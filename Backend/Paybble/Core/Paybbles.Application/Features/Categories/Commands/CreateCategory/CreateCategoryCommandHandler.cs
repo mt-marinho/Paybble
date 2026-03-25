@@ -5,8 +5,7 @@ using Paybble.Domain.Entities;
 
 namespace Paybble.Application.Features.Categories.Commands.CreateCategory
 {
-    public class CreateCategoryCommandHandler(ICategoryRepository categoryRepository, IMapper mapper) 
-        : IRequestHandler<CreateCategoryCommand, CreateCategoryResponse>
+    public class CreateCategoryCommandHandler(ICategoryRepository categoryRepository, IMapper mapper) : IRequestHandler<CreateCategoryCommand, CreateCategoryResponse>
     {
         public async Task<CreateCategoryResponse> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
