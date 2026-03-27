@@ -7,7 +7,7 @@ using Paybble.Application.Features.Categories.Queries.GetCategoryDetail;
 
 namespace Paybble.Api.Endpoints
 {
-    public class CategoriesEndpoint : IEndpoint
+    public class CategoriesEndpoints : IEndpoint
     {
         public void Map(WebApplication app)
         {
