@@ -1,3 +1,5 @@
+using Paybble.Domain.Commom;
+
 namespace Paybble.Domain.Entities
 {
     public class Category : AuditableEntity

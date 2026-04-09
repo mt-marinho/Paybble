@@ -1,3 +1,4 @@
+using Paybble.Domain.Commom;
 using Paybble.Domain.Enums;
 
 namespace Paybble.Domain.Entities

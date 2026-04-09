@@ -1,4 +1,6 @@
-﻿namespace Paybble.Domain.Entities
+﻿using Paybble.Domain.Commom;
+
+namespace Paybble.Domain.Entities
 {
     public class Saving : AuditableEntity
     {

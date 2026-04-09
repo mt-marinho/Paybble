@@ -1,4 +1,4 @@
-﻿namespace Paybble.Domain.Entities
+﻿namespace Paybble.Domain.Commom
 {
     public abstract class AuditableEntity
     {

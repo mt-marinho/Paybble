@@ -79,7 +79,7 @@ namespace Paybble.Api.Endpoints
 
         private static async Task<IResult> HandlePatchTransactionPaymentStatus(
             [FromRoute] int id,
-            [FromBody] PatchTransactionPaymentStatusRequest request,
+            [FromBody] PatchTransactionCommand request,
             [FromServices] IMediator mediator)
         {
             var command = new PatchTransactionCommand(id, request.Paid);
@@ -124,6 +124,4 @@ namespace Paybble.Api.Endpoints
             return Results.Ok(result);
         }
     }
-
-    public record PatchTransactionPaymentStatusRequest(bool Paid);
 }
